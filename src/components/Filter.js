@@ -1,0 +1,21 @@
+import React from "react";
+
+const Filter =({filterData})=>{
+    return (
+        <div className=" w-11/1 flex max-w-max space-x-4 gap-y-4 mx-auto justify-center">
+            {
+            filterData.map((data) =>{
+                return <button className={`text-lg px-2 rounded-md font-medium
+                 text-white bg-black hover:bg-opacity-50 border-2
+                 transition-all duration-300`
+                }
+                  key={data.id}>{data.title}</button>
+            })
+            }
+
+        </div>
+    )
+}
+
+
+export default Filter;
